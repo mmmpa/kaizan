@@ -15,8 +15,6 @@ before_script:
   - cp spec/dummy/config/database.def.yml spec/dummy/config/database.yml
 script:
   - cd spec/dummy
-  - bundle exec rake db:create RAILS_ENV=test
-  - bundle exec rake db:migrate RAILS_ENV=test
-  - bundle exec rake db:test:prepare
+  - bundle install
   - cd ../../
   - bundle exec rake
