@@ -11,7 +11,7 @@ Kaizan（改ざん）はActionViewのテンプレート内で、下の方から�
 <h1>モデルたち <%= altering_anchor :displayed %>/<%= @models.count %></h1>
 <ul>
   <% displayed_count = 0 %>
-  <%= @models.each do |model| %>
+  <% @models.each do |model| %>
     <li><%= if model.display?
       displayed += 1
       model.full_name
