@@ -3,7 +3,6 @@ PATH
   specs:
     kaizan (0.0.1)
       rails (~> 4.2.1)
-      rails (~> 4.2.3)
 
 GEM
   remote: https://rubygems.org/

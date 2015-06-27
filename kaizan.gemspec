@@ -10,13 +10,13 @@ Gem::Specification.new do |spec|
   spec.authors     = ["mmmpa"]
   spec.email       = ["mmmpa.mmmpa@gmail.com"]
   spec.homepage    = "http://mmmpa.net"
-  spec.summary     = "TODO: Summary of Kaizan."
-  spec.description = "TODO: Description of Kaizan."
+  spec.summary     = "Replace string in SafeBuffer safety."
+  spec.description = "Replace string in SafeBuffer safety."
   spec.license     = "MIT"
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
-  spec.add_dependency "rails", "~> 4.2.3"
+  spec.add_dependency "rails", "~> 4.2.1"
 
   spec.files         = `git ls-files`.split("\n")
   spec.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
