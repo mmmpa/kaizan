@@ -1,12 +1,12 @@
 <h1>Altering Past Buffer</h1>
 <ul>
-    <li><%= '<xml>not safe string' %></li>
-    <li><%= altering_anchor %></li>
-    <li><%= altering_anchor %></li>
-    <li><%= altering_anchor %></li>
-    <li><%= altering_anchor :named_anchor %></li>
-    <li><%= altering_anchor :named_anchor %></li>
-    <li><%= altering_anchor :foot_line %></li>
+    <li class="case1"><%= '<xmp>not safe string' %></li>
+    <li class="case2"><%= altering_anchor %></li>
+    <li class="case3"><%= altering_anchor %></li>
+    <li class="case4"><%= altering_anchor %></li>
+    <li class="case5"><%= altering_anchor :named_anchor %></li>
+    <li class="case6"><%= altering_anchor :named_anchor %></li>
+    <li class="case7"><%= altering_anchor :foot_line %></li>
 </ul>
 <%= altering_anchor %>
 <% alter_past(0, :string) %>
