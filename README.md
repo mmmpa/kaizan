@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/mmmpa/kaizan.svg)](https://travis-ci.org/mmmpa/kaizan)
+[![Coverage Status](https://coveralls.io/repos/mmmpa/kaizan/badge.svg?branch=master)](https://coveralls.io/r/mmmpa/kaizan?branch=master)
+
 # Kaizan
 
 Kaizan（改ざん）はActionViewのテンプレート内で、下の方から上の方の指定領域に文字列を書き込むために書かれました。
@@ -8,7 +11,7 @@ Kaizan（改ざん）はActionViewのテンプレート内で、下の方から�
 <h1>モデルたち <%= altering_anchor :displayed %>/<%= @models.count %></h1>
 <ul>
   <% displayed_count = 0 %>
-  <%= @models.each do |model| %>
+  <% @models.each do |model| %>
     <li><%= if model.display?
       displayed += 1
       model.full_name
