@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/mmmpa/kaizan.svg)](https://travis-ci.org/mmmpa/kaizan)
+[![Coverage Status](https://coveralls.io/repos/mmmpa/kaizan/badge.svg?branch=master)](https://coveralls.io/r/mmmpa/kaizan?branch=master)
+
 # Kaizan
 
 Kaizan（改ざん）はActionViewのテンプレート内で、下の方から上の方の指定領域に文字列を書き込むために書かれました。
