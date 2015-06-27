@@ -33,12 +33,7 @@ module ActionView
 
     def alter_past!(name, content)
       return unless (anchor = detect_anchor(name)).present?
-      gsub_not_safety!(anchor, alter_string_safety(content))
-    end
-
-
-    def alter_string_safety(content)
-      content.html_safe? ? content.to_s : html_escape_interpolated_argument_force(content.to_s)
+      gsub_not_safety!(anchor, html_escape_interpolated_argument(content))
     end
 
 
@@ -63,11 +58,6 @@ module ActionView
       else
         "<!-- altering_anchor:#{SecureRandom.hex(16)} -->"
       end
-    end
-
-
-    def html_escape_interpolated_argument_force(arg)
-      arg.to_s.gsub(ERB::Util::HTML_ESCAPE_REGEXP, ERB::Util::HTML_ESCAPE)
     end
   end
 end
