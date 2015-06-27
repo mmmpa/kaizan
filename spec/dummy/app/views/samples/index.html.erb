@@ -1,0 +1,18 @@
+<h1>Altering Past Buffer</h1>
+<ul>
+    <li><%= '<xml>not safe string' %></li>
+    <li><%= altering_anchor %></li>
+    <li><%= altering_anchor %></li>
+    <li><%= altering_anchor %></li>
+    <li><%= altering_anchor :named_anchor %></li>
+    <li><%= altering_anchor :named_anchor %></li>
+    <li><%= altering_anchor :foot_line %></li>
+</ul>
+<%= altering_anchor %>
+<% alter_past(0, :string) %>
+<% alter_past(1, '<xmp>Not safe altering') %>
+<% alter_past(2, '<strong>Safe altering</strong>'.html_safe) %>
+<% alter_past(:named_anchor, 'Multiple altering') %>
+<% alter_past(:foot_line, 'Thank you') %>
+<% alter_past(:not_exit_anchor, 'Not exist') %>
+<footer>Concatenated</footer>

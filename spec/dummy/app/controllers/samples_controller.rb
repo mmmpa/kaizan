@@ -1,10 +1,12 @@
-module Kaizan
-  refine String do
-    alias :gsub_not_safety! :gsub!
+class SamplesController < ApplicationController
+  def index
   end
 end
 
+
 module ActionView
+  using Kaizan
+
   module Helpers
     def alter_past(name, content)
       output_buffer.alter_past!(name, content)
@@ -17,6 +19,7 @@ module ActionView
   end
 
   class OutputBuffer
+
     attr_accessor :altering_anchor, :anonymous_anchor
 
 
@@ -30,7 +33,7 @@ module ActionView
 
     def alter_past!(name, content)
       return unless (anchor = detect_anchor(name)).present?
-      gsub!(anchor, alter_string_safety(content))
+      gsub_not_safety!(anchor, alter_string_safety(content))
     end
 
 
